@@ -7,20 +7,22 @@ const handleUserInput = (char) => { // This function checks keystrokes and is pa
     process.exit();
   }
   if (char === '\u0077') { // Type 'w' to move up
-    console.log('Move: up');
     connection.write('Move: up');
   }
   if (char === '\u0061') { // Type 'a' to move left
-    console.log('Move: left');
     connection.write('Move: left');
   }
   if (char === '\u0073') {
-    console.log('Move: down');
     connection.write('Move: down'); // Type 's' to move down
   }
   if (char === '\u0064') {
-    console.log('Move: right');
     connection.write('Move: right'); // Type 'd' to move right
+  }
+  if (char === '\u0031') { // Type '1' to say 'Hello world' canned message
+    connection.write('Say: Hello world!');
+  }
+  if (char === '\u0032') { // Type '2' to say 'I'm going to win!' canned message
+    connection.write('Say: I\'m going to win!');
   }
 };
 

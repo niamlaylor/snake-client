@@ -4,6 +4,4 @@ const setupInput = require('./input');
 
 console.log('Connecting ...');
 
-connect(); // This function lives in the client.js file for simplicity
-
-setupInput();
+setupInput(connect()); // connect function lives in the client.js file for simplicity

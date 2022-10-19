@@ -12,7 +12,7 @@ const connect = function () {
     console.log('Incoming message: ', data);
   });
 
-  // this event handler prints a confirmation as soon as we conect to the game server
+  // this event handler prints a confirmation as soon as we connect to the game server
   conn.on('connect', () => {
     console.log('Successfully connected to the game server!');
     conn.write('Name: LNN');

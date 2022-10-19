@@ -17,6 +17,7 @@ const movements = {
   win: '\u0032'
 };
 
+
 module.exports = {
   IP,
   PORT,

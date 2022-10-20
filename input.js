@@ -1,7 +1,7 @@
 const { stdin } = require("process");
 const { movements } = require('./constants');
 
-let connection;
+let connection; // defining connection as a variable to be used in setupInput function below
 
 const handleUserInput = (char) => { // This function checks keystrokes and is passed as a callback into stdin.on below in setupInput
   if (char === movements.exit) {
@@ -28,7 +28,7 @@ const handleUserInput = (char) => { // This function checks keystrokes and is pa
 };
 
 const setupInput = function (conn) {
-  connection = conn;
+  connection = conn; // The connect() function from client.js is passed into this function as an argument and it links the input file to the client file
   const stdin = process.stdin;
   stdin.on('data', handleUserInput);
   stdin.setRawMode(true);
